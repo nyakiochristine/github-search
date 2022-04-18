@@ -1,4 +1,7 @@
 export class User {
+    then(arg0: (success: any) => void, arg1: (error: any) => void) {
+      throw new Error('Method not implemented.');
+    }
     constructor(
    public name: string,
    public followers: number,

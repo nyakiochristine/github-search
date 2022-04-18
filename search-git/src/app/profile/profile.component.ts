@@ -47,6 +47,7 @@ export class ProfileComponent implements OnInit {
   
 
   ngOnInit(); void {
+  
     
     
   }
@@ -57,6 +58,10 @@ export class ProfileComponent implements OnInit {
 
 
 function ngOnInit() {
+  throw new Error('Function not implemented.');
+}
+
+function nyakiochristine(nyakiochristine: any) {
   throw new Error('Function not implemented.');
 }
 
