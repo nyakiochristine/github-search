@@ -1,1 +1,103 @@
+<div class="container-fluid d-flex text-align-center justify-content-center">
+    <h3>Find someone on Github</h3>
+</div>
+    <div class="input-group">
+        <input type="text" placeholder="search profile text:center" class="form-control"
+        (keyup.enter)="(profile)">
+    </div>
+
+    <div *ngIf="error">
+        <app-user-not-found></app-user-not-found>
+    </div>
+
+    <!--start of bio ontro-->
+    <div *ngIf="user">
+        <div class="panel-heading">
+            <h4>{{user.name}}</h4>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <img class="" src="{{user.avatar_url}}">
+                    </div>
+
+                    <div class="col-sm-6 m-auto">
+                        <span class="label">{{user.public_repos}}</span>
+                        <span>Public Repositories</span>
+
+
+                    </div>
+                </div>
+                <span class="label label-success fw-bold text-info"
+                >{{ user.followers }}
+              </span>
+              <span>Followers</span>
+            </div>
+        </div>
+        div>
+                <span class="label label-info fw-bold text-info"
+                  >{{ user.followers }}
+                </span>
+                <span>Following</span>
+              </div>
+              <div>
+                <span>Location: </span>
+                <span class="label label-info fw-bold text-info"
+                  >{{ user.location }}
+                </span>
+              </div>
+              <div>
+                <span>Member since: </span>
+                <span class="label label-info fw-bold text-info"
+                  >{{ user.created_at | date: "mediumDate" }}
+                </span>
+                <div>
+                  <span>Website: </span>
+                  <span class="label label-info fw-bold text-info"
+                    ><a href="{{user.blog}}"> {{ user.blog }}</a>
+
+                  </span>
+                </div>
+
+
+    </div>
+
+
+    <!--list of repositories-->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title text-center text-info">Repos</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-12">
+    
+              <div *ngFor="let repo of repos">
+                <div class="row">
+                  <div class="col-md-9">
+                    <h4>
+                      <a href="{{ repo.html_url }}" target="_blank">{{
+                        repo.name
+                      }}</a>
+                    </h4>
+                    <p>{{ repo.description }}</p>
+                  </div>
+                  <div class="col-md-3">
+                    <div>
+                      <span class="label  mx-2"
+                        >{{ repo.watchers }} Watchers</span
+                      >
+                      <span class="label  mx-2"
+                        >{{ repo.forks }}Total Forks</span
+                      >
+                    </div>
+  
+                    <div class="label  mx-2">
+                      Created on: {{ repo.created_at}}
+                    </div>
+                  </div>
+                </div>
+                </div>
+            <br>
+        </div>
+
 
