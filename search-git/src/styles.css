@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300&family=Poppins:wght@100;200;500&family=Rubik+Moonrocks&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akshar&family=Overpass:wght@300&family=Poppins:wght@100;200;500&family=Rubik+Moonrocks&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgb(171, 115, 40);
+    color: rgb(12, 12, 11);
+}
+
+
