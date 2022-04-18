@@ -1,5 +1,19 @@
 # SearchGit
 
+## Author
+
+[Christine-Mwangi](https://github.com/nyakiochristine)
+
+## Description
+
+This is agular cli application that displays quotes, allow the user to input new quote, upvote , downvote and delete the quote.
+
+## Live Page
+
+<https://nyakiochristine.github.io/git-search/>
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
 
 ## Development server
@@ -25,3 +39,24 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Technologies Used
+
+* [HTML5](https://github.com/topics/html5)
+* [CSS](https://github.com/topics/css3)
+* [AngulerCLI]
+* markdown
+* [Bootstrap](https://github.com/topics/bootstrap)
+
+## Known Bugs
+
+* **
+
+## Contact Information
+
+If you have any question or contributions, please email me at [chrissymwangi254@gmail.com]
+
+## License
+
+* *MIT License:*
+* Copyright (c) 2019 **Christine Mwangi**
