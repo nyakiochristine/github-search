@@ -14,14 +14,14 @@ export class SearchComponent implements OnInit {
 
   constructor(public userService:GithubService){}
   searchUser(username:string){
-    this.userService.getProfile(username).then((success: any)=>{
+    this.userService['getProfile'](username).then((_success: any)=>{
      this.user = this.userService.user;
     },
     (error: any)=>{
       console.log(error)
     });
-    this.userService.getRepos(username).then((success: any)=>{
-     this.repos = this.userService.repos;
+    this.userService['getRepos'](username).then((_success: any)=>{
+     this.repos = this.userService['repos'];
     },
     (error: any)=>{
       console.log(error)

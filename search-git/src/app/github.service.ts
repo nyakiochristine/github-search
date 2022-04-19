@@ -9,14 +9,11 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class GithubService {
-  repos: any;
-  getRepo(username: string) {
-    throw new Error('Method not implemented.');
-  }
+  [x: string]: any;
+   
  public username:string = "nyakiochristine";
-  getProfile: any;
   user!: User;
-  getRepos:any;
+  repo!:Repos;
 
   constructor(public http:HttpClient) {}
 
