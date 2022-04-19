@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
-import { Repos } from '../repos';
 import { GithubService } from '../github.service';
-import { ProfileService } from '../profile.service';
-import { error } from 'console';
+
 
 @Component({
   selector: 'app-search',
@@ -31,7 +29,7 @@ export class SearchComponent implements OnInit {
   }
 
  ngOnInit(): void {
-   this.searchUser('amani-joseph');
+   this.searchUser('nyakiochristine');
  }
 
 }
