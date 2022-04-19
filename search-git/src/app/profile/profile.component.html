@@ -3,12 +3,11 @@
 </div>
     <div class="input-group">
         <input type="text" placeholder="search profile text:center" class="form-control"
-        (keyup.enter)="(profile)">
+        [(ngModel)]="searchTerm">
+        <button class="btn btn-primary "(click)="search()">Search</button>
     </div>
 
-    <div *ngIf="error">
-        <app-user-not-found></app-user-not-found>
-    </div>
+  
 
     <!--start of bio ontro-->
     <div *ngIf="user">
@@ -17,7 +16,7 @@
             <div class="panel-body">
                 <div class="row">
                     <div class="col-sm-4">
-                        <img class="" src="{{user.avatar_url}}">
+                        <img class="img-fluid" src="{{user.avatar_url}}">
                     </div>
 
                     <div class="col-sm-6 m-auto">
@@ -39,21 +38,21 @@
                 </span>
                 <span>Following</span>
               </div>
-              <div>
+              <!-- <div>
                 <span>Location: </span>
                 <span class="label label-info fw-bold text-info"
                   >{{ user.location }}
                 </span>
-              </div>
+              </div> -->
               <div>
                 <span>Member since: </span>
                 <span class="label label-info fw-bold text-info"
                   >{{ user.created_at | date: "mediumDate" }}
                 </span>
                 <div>
-                  <span>Website: </span>
+                  <span>About: </span>
                   <span class="label label-info fw-bold text-info"
-                    ><a href="{{user.blog}}"> {{ user.blog }}</a>
+                    ><a href="{{user.html_url}}"> {{ user.bio }}</a>
 
                   </span>
                 </div>
@@ -86,6 +85,7 @@
                       <span class="label  mx-2"
                         >{{ repo.watchers }} Watchers</span
                       >
+                     
                       <span class="label  mx-2"
                         >{{ repo.forks }}Total Forks</span
                       >

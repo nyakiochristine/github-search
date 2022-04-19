@@ -1,26 +1,33 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from './user';
 import { Repos } from './repos';
 import { environment } from 'src/environments/environment';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GithubService {
-  [x: string]: any;
-   
- public username:string = "nyakiochristine";
-  user!: User;
-  repo!:Repos;
-
-  constructor(public http:HttpClient) {}
 
 
-  getUser(_username: string){
-    const url =`https://api.github.com/users/${this.username}`;
-    return this.http.get<any>(url);
-  
+  constructor(private http: HttpClient) { }
+
+
+  getUser(username: String): Observable<User> {
+    let searchRequest = environment.GITHUB_API_URL + username;
+    return this.http.get<User>(searchRequest,);
+
   }
+
+  getRepos(username: string): Observable<Repos[]> {
+    let searchRequest = environment.GITHUB_API_URL  + username + '/repos';
+
+    console.log(searchRequest);
+    return this.http.get<Repos[]>(searchRequest);
+  }
+
+
+
 }
+

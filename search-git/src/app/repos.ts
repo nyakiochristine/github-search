@@ -6,7 +6,8 @@ export class Repos {
         public description: string,
         public language:string,
         public forks:number,
-        public created_at: Date
+        public created_at: Date,
+        public watchers: number
     ){}
 
     
