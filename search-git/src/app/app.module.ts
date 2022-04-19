@@ -11,6 +11,9 @@ import { FooterComponent } from './footer/footer.component';
 import { UserNotFoundComponent } from './user-not-found/user-not-found.component';
 import { SearchComponent } from './search/search.component';
 import { ProfileComponent } from './profile/profile.component';
+import { DateCountPipe } from './date-count.pipe';
+import { UserNotFoundDirective } from './user-not-found.directive';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { ProfileComponent } from './profile/profile.component';
     FooterComponent,
     UserNotFoundComponent,
     SearchComponent,
-    ProfileComponent
+    ProfileComponent,
+    DateCountPipe,
+    UserNotFoundDirective,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

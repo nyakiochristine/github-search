@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { User } from './user';
 import { Repos } from './repos';
 import { environment } from 'src/environments/environment';
 import { BehaviorSubject } from 'rxjs';
@@ -8,7 +9,14 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class GithubService {
+  repos: any;
+  getRepo(username: string) {
+    throw new Error('Method not implemented.');
+  }
  public username:string = "nyakiochristine";
+  getProfile: any;
+  user!: User;
+  getRepos:any;
 
   constructor(public http:HttpClient) {}
 
