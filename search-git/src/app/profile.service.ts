@@ -6,11 +6,7 @@ import { Observable } from 'rxjs';
 
 
 
-const httpOptions = {
-  headers: new HttpHeaders({
-    "Authorization":environment.githubApiToken
-  })
-}
+
 
 
 @Injectable({
@@ -23,11 +19,11 @@ export class ProfileService {
 
   getData(userName:string):Observable <any> {
     const url = `https://api.github.com/users/${userName}`;
-    return this.http.get<any>(url,httpOptions)
+    return this.http.get<any>(url)
   }
 
   getRepos(userName:string):Observable <any> {
     const url = `https://api.github.com/users/${userName}/repos`;
-    return this.http.get<any>(url,httpOptions)
+    return this.http.get<any>(url)
   }
 }
