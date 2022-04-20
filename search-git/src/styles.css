@@ -1,12 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300&family=Poppins:wght@100;200;500&family=Rubik+Moonrocks&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Akshar&family=Overpass:wght@300&family=Poppins:wght@100;200;500&family=Rubik+Moonrocks&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Smokum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=Dancing+Script:wght@600&family=Smokum&display=swap');
+
  body{
    
     box-sizing: border-box;
-    background-color: rgb(171, 115, 40);
+    /*background-color:#E56997;*/
+    background-color: rgba(226, 122, 122, 0.942);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0%;
+    color: #0c0a01;
+    
+
    
 }
 footer{
@@ -14,6 +19,37 @@ footer{
     height: 100px;
    
 }
+
+.navbar-brand {
+    background:none;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Smokum', cursive;
+    font-size: 40px;
+    color: black;
+    
+
+}
+.navbar{
+    color: black;
+}
+
+.git{
+    font-size: 40px;
+    font-family: 'Alumni Sans Inline One';
+    
+}
+.panel{
+    font-size: 24px;
+}
+
+a:link{
+    text-decoration: none;
+}
+#rep{
+    font-size: 30px;
+    
+}
+
 
 
 

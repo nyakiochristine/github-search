@@ -1,11 +1,12 @@
 <div class="container-fluid d-flex text-align-center justify-content-center">
-    <h3>Find someone on Github</h3>
+    <h3 class="git">Find someone on Github</h3>
 </div>
     <div class="input-group">
         <input type="text" placeholder="search profile text:center" class="form-control"
         [(ngModel)]="searchTerm">
         <button class="btn btn-primary "(click)="search()">Search</button>
     </div>
+    <hr>
 
   
 
@@ -20,38 +21,34 @@
                     </div>
 
                     <div class="col-sm-6 m-auto">
-                        <span class="label">{{user.public_repos}}</span>
-                        <span>Public Repositories</span>
+                        <span id="rep" class="label">{{user.public_repos}}</span>
+
+                        <span id="rep">Public Repositories</span>
 
 
                     </div>
                 </div>
-                <span class="label label-success fw-bold text-info"
+                <span class="label  fw-bold "
                 >{{ user.followers }}
               </span>
               <span>Followers</span>
             </div>
         </div>
-        div>
-                <span class="label label-info fw-bold text-info"
+      
+                <span class="label lb1  fw-bold "
                   >{{ user.followers }}
                 </span>
                 <span>Following</span>
               </div>
-              <!-- <div>
-                <span>Location: </span>
-                <span class="label label-info fw-bold text-info"
-                  >{{ user.location }}
-                </span>
-              </div> -->
+              
               <div>
                 <span>Member since: </span>
-                <span class="label label-info fw-bold text-info"
+                <span class="label lb1  fw-bold "
                   >{{ user.created_at | date: "mediumDate" }}
                 </span>
                 <div>
                   <span>About: </span>
-                  <span class="label label-info fw-bold text-info"
+                  <span class="label lb1  fw-bold "
                     ><a href="{{user.html_url}}"> {{ user.bio }}</a>
 
                   </span>
@@ -59,12 +56,13 @@
 
 
     </div>
-
+<br>
+<hr>
 
     <!--list of repositories-->
     <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title text-center text-info">Repos</h3>
+          <h3 class="panel-title text-center ">Repositories</h3>
         </div>
         <div class="panel-body">
           <div class="row">
@@ -84,20 +82,23 @@
                     <div>
                       <span class="label  mx-2"
                         >{{ repo.watchers }} Watchers</span
-                      >
+                      ></div>
                      
                       <span class="label  mx-2"
                         >{{ repo.forks }}Total Forks</span
                       >
-                    </div>
+                     </div>
   
                     <div class="label  mx-2">
                       Created on: {{ repo.created_at |date :"mediumDate"}}
                     </div>
                   </div>
+                  <br>
                 </div>
                 </div>
-            <br>
+           
+          </div>
+          </div>
         </div>
 
 
